@@ -1,0 +1,187 @@
+/*
+note: blue to greyish , green to whtite
+    
+*/
+@font-face {
+
+    font-family: 'BLOKKNeue-Regular';
+    src: url('../BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.woff') format('woff');
+}
+
+html {
+
+    /*font-size: 20px;*/
+}
+
+
+* {
+	box-sizing: border-box;
+	list-style: none;
+    /*border: 1px blue dotted;*/
+}
+
+/**************/
+/*BASE STYLES*/
+/*************/
+
+/*font*/
+
+
+h1, h2, li, p {
+	text-align: center;	
+	/*border: 2px red dotted;*/
+
+}
+
+
+img {
+    width: 100%;
+    text-align: center;
+}
+
+nav li {
+  
+    font-size: 1rem;
+
+    background: white;
+
+    height: 50px;
+    margin: 2px auto;
+    align-content: center;
+    /*border: 2px red dotted;*/
+    padding: ;
+}
+
+
+nav a {
+     padding-top: 1rem;
+ 
+    text-decoration: none;
+    display: block;
+    height: 100%;
+
+}
+
+/* nav link */
+nav a, nav a:visited {
+     color: #000;
+     font-weight: 700;
+}
+
+/*******************/
+/*CONTAINER STYLES*/
+/*******************/
+
+#wrapper {
+    line-height: 1.5em;
+    color: #000;      
+}
+
+#header-box, #about-me-box, #contact-box {
+    background: #FAFAFB;
+}
+
+/*select all children of wrapper*/
+#header-box,
+#wrapper > div {
+        padding-left: 5%;    
+        padding-right: 5%;
+}
+
+
+#about-me-box {
+    padding-bottom: 40px;
+}
+
+#about-me-box img {
+    
+    width: 200px;
+    
+   /*lets center our image*/
+    display: block;   
+    margin: 0 auto 40px;
+    
+    padding-top: 30px;   
+} 
+
+
+#about-me-box p {
+    margin: 0;
+}
+
+
+
+/*fix: collapsing margin*/
+nav li:last-child {
+    margin-bottom: 0;
+}
+
+/**********************/
+/****PORTFOLIO BOX*****/
+/***********************/
+
+#portfolio-gallery-box {
+     background: #fff;
+     padding-bottom: 16px;   
+}
+
+.gallery-header-text {
+    margin-bottom: 40px;   
+}
+
+#portfolio-gallery-box p {
+
+    font-family: "BLOKKNeue-Regular", serif;   
+}
+
+#portfolio-gallery-box img {
+    padding-top: 0px;  
+}
+
+.gallery-grid-item {
+  
+    margin: 30px 0 20px;
+}
+
+#contact-box {
+    padding-top: 30px;
+}
+
+/*margin collapsing*/
+#contact-box p:last-child {
+   margin-bottom: 0;
+}
+
+.contact-box-header,
+.student-header {
+
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media(min-width: 768px) 
+{
+    /*header*/
+
+    nav { 
+
+        text-align: center; 
+        padding-top: 1.25rem;
+    }
+
+    nav li {
+
+        display: inline-block;
+        border: 1px red dotted;
+        margin: 0 1.25rem;
+    }   
+
+
+    #about-me-box img { width: 287px; }
+
+}
+
