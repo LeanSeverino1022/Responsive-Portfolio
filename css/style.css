@@ -1,7 +1,10 @@
-/*
-note: blue to greyish , green to whtite
-    
-*/
+* {
+    box-sizing: border-box;
+    list-style: none;
+    /*border: 1px blue dotted;*/
+}
+
+
 @font-face {
 
     font-family: 'BLOKKNeue-Regular';
@@ -14,25 +17,17 @@ html {
 }
 
 
-* {
-	box-sizing: border-box;
-	list-style: none;
-    /*border: 1px blue dotted;*/
-}
+/*:empty { background: green;} */
 
-:empty {
-    /*background: green;*/
-}
 
-/**************/
-/*BASE STYLES*/
-/*************/
 
-/*font*/
+
+/***********BASE STYLES************/
 
 
 h1, h2, li, p {
 	text-align: center;	  
+
 	/*border: 2px red dotted;*/
 
 }
@@ -71,10 +66,17 @@ nav a, nav a:visited {
      color: #000;
      font-weight: 700;
 }
+ 
+.contact-box-header,
+.student-header {
+    margin: 0 0 2.5rem;
+    padding-top: 20px;
+}
 
-/*******************/
-/*CONTAINER STYLES*/
-/*******************/
+
+
+/*********CONTAINER STYLES**********/
+
 
 #wrapper {
     line-height: 1.5em;
@@ -92,6 +94,13 @@ nav a, nav a:visited {
         padding-right: 5%;
 }
 
+/*Fix collapsing margin*/
+nav li:last-child {
+    margin-bottom: 0; 
+}
+
+
+/*************ABOUT-ME*********/
 
 #about-me-box {
     padding-bottom: 40px;
@@ -108,29 +117,10 @@ nav a, nav a:visited {
 } 
 
 
-#about-me-box p {
-    margin: 0;
-}
-
-#contact-box p > span {
-    font-weight: 600;
-}
+#about-me-box p { margin: 0; }
 
 
-/*fix: collapsing margin*/
-nav li:last-child {
-    margin-bottom: 0;
-}
-
-/**********************/
-/****PORTFOLIO BOX*****/
-/***********************/
-
-    #portfolio-gallery-box {
-        
-    }
-
-
+/************PORTFOLIO************/
 
 #portfolio-gallery-box {
      background: #fff;
@@ -147,8 +137,6 @@ nav li:last-child {
 #portfolio-gallery-box .gallery-header-text {
     margin-top: 0;
     margin-bottom: 40px;  
-
-
 }
 
 #portfolio-gallery-box p {
@@ -164,9 +152,17 @@ nav li:last-child {
     margin: 20px 0 40px;
 }
 
+
+/************CONTACT***********/
+
 #contact-box {
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+/*phone & email*/
+#contact-box p > span {
+    font-weight: 600;
 }
 
 /*margin collapsing*/
@@ -174,29 +170,19 @@ nav li:last-child {
    margin-bottom: 0;
 }
 
-.contact-box-header,
-.student-header {
-
-    margin-top: 0;
-    padding-top: 20px;
-}
+/*FOOTER*/
 
 footer {
-
-
+    height: 40px;
     margin: 20px auto 40px;
-    width: 95%;
-
-
-   
+    width: 95%;  
 }
 
 footer a,
 footer a:visited {
     text-decoration: none;
     color: black;
-    font-weight: bold;
-     
+    font-weight: bold;     
 }
 
 .right-footer, 
@@ -206,9 +192,11 @@ footer a:visited {
     vertical-align: top;
 }
 
-.right-footer {
+.right-footer
+{
     text-align: right;
 }
+  
 
 .right-footer li {
         display: inline-block;
@@ -216,23 +204,22 @@ footer a:visited {
 
 }
 
-/*.name-link {
-    padding-left: 20px;
-    text-align: left;
+.right-footer-wide {display: none; }
+
+
+/*CLEAR-FIX*/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-.back-to-top-link {
-    padding-right: 20px;
-    text-align: right;
-    vertical-align: top;
-}
-*/
-
-footer div {
-    border: 2px blue dotted;
+.cf:after {
+     clear: both;
 }
 
-/*MEDIA QUERIES*/
+/**********MEDIA QUERIES***********/
 
 @media(min-width: 768px) 
 {
@@ -274,16 +261,7 @@ footer div {
 
     }
 
-    .cf:before,
-    .cf:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
-    }
-
-    .cf:after {
-         clear: both;
-    }
-
+  
     /*float items in the gallery*/
 
     /*targets an element based on its position within a parent, 
@@ -308,18 +286,16 @@ footer div {
         font-weight: 300;
     }
 
-    #contact-box {
-        border: 2px red dotted;
+
+    /********FOOTER*********/
+
+    .right-footer-narrow { 
+         display: none;        
     }
 
-    .back-to-top-link {
-       visibility: hidden;
-    }
-
-    .left-footer li {
-        display: inline-block;
-    }
-
+    .right-footer-wide { 
+        display: inline-block;   
+    }   
      
  }
 
