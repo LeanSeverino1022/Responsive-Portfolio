@@ -20,6 +20,10 @@ html {
     /*border: 1px blue dotted;*/
 }
 
+:empty {
+    /*background: green;*/
+}
+
 /**************/
 /*BASE STYLES*/
 /*************/
@@ -28,7 +32,7 @@ html {
 
 
 h1, h2, li, p {
-	text-align: center;	
+	text-align: center;	  
 	/*border: 2px red dotted;*/
 
 }
@@ -100,7 +104,6 @@ nav a, nav a:visited {
    /*lets center our image*/
     display: block;   
     margin: 0 auto 40px;
-    
     padding-top: 30px;   
 } 
 
@@ -109,6 +112,9 @@ nav a, nav a:visited {
     margin: 0;
 }
 
+#contact-box p > span {
+    font-weight: 600;
+}
 
 
 /*fix: collapsing margin*/
@@ -120,13 +126,29 @@ nav li:last-child {
 /****PORTFOLIO BOX*****/
 /***********************/
 
+    #portfolio-gallery-box {
+        
+    }
+
+
+
 #portfolio-gallery-box {
      background: #fff;
-     padding-bottom: 16px;   
+     padding-bottom: 16px;  
+     padding-top: 50px;
+
 }
 
-.gallery-header-text {
-    margin-bottom: 40px;   
+#portfolio-gallery-box h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+#portfolio-gallery-box .gallery-header-text {
+    margin-top: 0;
+    margin-bottom: 40px;  
+
+
 }
 
 #portfolio-gallery-box p {
@@ -139,12 +161,12 @@ nav li:last-child {
 }
 
 .gallery-grid-item {
-  
-    margin: 30px 0 20px;
+    margin: 20px 0 40px;
 }
 
 #contact-box {
     padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 /*margin collapsing*/
@@ -159,7 +181,56 @@ nav li:last-child {
     padding-top: 20px;
 }
 
+footer {
 
+
+    margin: 20px auto 40px;
+    width: 95%;
+
+
+   
+}
+
+footer a,
+footer a:visited {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+     
+}
+
+.right-footer, 
+.left-footer {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right-footer {
+    text-align: right;
+}
+
+.right-footer li {
+        display: inline-block;
+        margin: 0 4px;
+
+}
+
+/*.name-link {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.back-to-top-link {
+    padding-right: 20px;
+    text-align: right;
+    vertical-align: top;
+}
+*/
+
+footer div {
+    border: 2px blue dotted;
+}
 
 /*MEDIA QUERIES*/
 
@@ -168,20 +239,100 @@ nav li:last-child {
     /*header*/
 
     nav { 
-
         text-align: center; 
         padding-top: 1.25rem;
+        /*border: 2px red dotted;      */
     }
 
     nav li {
-
         display: inline-block;
-        border: 1px red dotted;
-        margin: 0 1.25rem;
+        margin: 0 1rem;
+        background: #FAFAFB;
     }   
 
+    #about-me-box {
+       padding-top: 30px; 
+    }
 
-    #about-me-box img { width: 287px; }
+    #about-me-box img { 
+        float: right;
+        width: 42%;              
+    }
 
-}
+    .about-me-text {
+        float: left;
+        width: 56%;
+        
+        /*align text with image*/        
+        padding-top: 30px;    
+    }
+
+    .about-me-text p {
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.8rem;
+
+    }
+
+    .cf:before,
+    .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .cf:after {
+         clear: both;
+    }
+
+    /*float items in the gallery*/
+
+    /*targets an element based on its position within a parent, 
+    but only if it’s a .gallery-grid-item */
+    .gallery-grid-item:nth-of-type(odd)  {
+         width: 49%;
+        float: left;      
+    }
+
+      .gallery-grid-item:nth-of-type(even)  {
+         width: 49%;
+        float: right;      
+    }
+
+    .gallery-grid-item p {
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+     .gallery-grid-item h2 {
+        font-weight: 300;
+    }
+
+    #contact-box {
+        border: 2px red dotted;
+    }
+
+    .back-to-top-link {
+       visibility: hidden;
+    }
+
+    .left-footer li {
+        display: inline-block;
+    }
+
+     
+ }
+
+
+  /*    .gallery-grid-item:nth-child(even)  {
+        
+        background: red;
+      
+    }*/
+
+
+
+
+
+
 
