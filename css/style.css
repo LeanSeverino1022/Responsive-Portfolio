@@ -16,6 +16,11 @@ html {
     /*font-size: 20px;*/
 }
 
+body {
+
+    background: #FAFAFB;
+}
+
 
 /*:empty { background: green;} */
 
@@ -26,10 +31,10 @@ html {
 
 
 h1, h2, li, p {
-	text-align: center;	  
 
-	/*border: 2px red dotted;*/
+    text-align: center;   
 
+    /*border: 2px red dotted;*/
 }
 
 
@@ -53,7 +58,8 @@ nav li {
 
 
 nav a {
-     padding-top: 1rem;
+
+    padding-top: 1rem;
  
     text-decoration: none;
     display: block;
@@ -63,14 +69,14 @@ nav a {
 
 /* nav link */
 nav a, nav a:visited {
+
      color: #000;
      font-weight: 700;
 }
  
 .contact-box-header,
 .student-header {
-    margin: 0 0 2.5rem;
-    padding-top: 20px;
+    margin: 25px 0 2.5rem;  
 }
 
 
@@ -79,6 +85,7 @@ nav a, nav a:visited {
 
 
 #wrapper {
+
     line-height: 1.5em;
     color: #000;      
 }
@@ -87,24 +94,25 @@ nav a, nav a:visited {
     background: #FAFAFB;
 }
 
+#portfolio-box {
+    /*background: white;*/
+}
+
 /*select all children of wrapper*/
 #header-box,
 #wrapper > div {
+
         padding-left: 5%;    
         padding-right: 5%;
 }
 
 /*Fix collapsing margin*/
-nav li:last-child {
-    margin-bottom: 0; 
-}
+nav li:last-child { margin-bottom: 0; }
 
 
 /*************ABOUT-ME*********/
 
-#about-me-box {
-    padding-bottom: 40px;
-}
+#about-me-box { padding-bottom: 40px; }
 
 #about-me-box img {
     
@@ -122,29 +130,29 @@ nav li:last-child {
 
 /************PORTFOLIO************/
 
-#portfolio-gallery-box {
+#portfolio-box {
      background: #fff;
      padding-bottom: 16px;  
      padding-top: 50px;
 
 }
 
-#portfolio-gallery-box h2 {
+#portfolio-box h2 {
     margin-top: 20px;
     margin-bottom: 0;
 }
 
-#portfolio-gallery-box .gallery-header-text {
+#portfolio-box .gallery-header-text {
     margin-top: 0;
     margin-bottom: 40px;  
 }
 
-#portfolio-gallery-box p {
+#portfolio-box p {
 
     font-family: "BLOKKNeue-Regular", serif;   
 }
 
-#portfolio-gallery-box img {
+#portfolio-box img {
     padding-top: 0px;  
 }
 
@@ -175,7 +183,7 @@ nav li:last-child {
 footer {
     height: 40px;
     margin: 20px auto 40px;
-    width: 95%;  
+    width: 90%;  
 }
 
 footer a,
@@ -192,8 +200,7 @@ footer a:visited {
     vertical-align: top;
 }
 
-.right-footer
-{
+.right-footer {
     text-align: right;
 }
   
@@ -201,10 +208,9 @@ footer a:visited {
 .right-footer li {
         display: inline-block;
         margin: 0 4px;
-
 }
 
-.right-footer-wide {display: none; }
+.right-footer-wide { display: none; }
 
 
 /*CLEAR-FIX*/
@@ -225,9 +231,13 @@ footer a:visited {
 {
     /*header*/
 
+    .student-header { 
+        margin-bottom: 0;
+     }
+
     nav { 
         text-align: center; 
-        padding-top: 1.25rem;
+        padding-top: .75rem;
         /*border: 2px red dotted;      */
     }
 
@@ -277,7 +287,7 @@ footer a:visited {
     }
 
     .gallery-grid-item p {
-        width: 85%;
+        width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -300,13 +310,66 @@ footer a:visited {
  }
 
 
-  /*    .gallery-grid-item:nth-child(even)  {
-        
-        background: red;
-      
-    }*/
+
+@media(min-width: 1024px) 
+{ 
+
+    #header-box .student-header,
+    #header-box nav {
+        display: inline-block;
+        width: 50%;  
+    }
+
+    #header-box .student-header { 
+        text-align: left; 
+        margin-right: -6px; /*Removing Gaps Between...*/
+    }
+    
+    
+    #header-box nav ul {
+        margin-right: -16px; /*Align item hack*/
+        text-align: right;    
+    }
+
+     #about-me-box { padding-top: 0; }
+
+   
+    #wrapper #portfolio-box {
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* ARRANGE OUR PORTFOLIO ITEMS*/
+
+    .gallery-grid-item:nth-child(n) {       
+       width: 30%;     
+       float: left;
+    }  
+
+    /*30% * 3 = 90% + 2.5%(4) = 100%; where 4 = num of spaces bet items */
+    .gallery-grid-item:nth-of-type(3n+2) { /*middle: 2..5..8 */      
+        margin-left: 2.5%;
+        margin-right: 2.5%;            
+    } 
+    
+    .gallery-grid-item:nth-of-type(3n+1) { margin-left: 2.5%; } /*1..4..7*/
+     
+    .gallery-grid-item:nth-of-type(3n+3) { margin-right: 2.5%; } /*3..6..9*/  
+
+    /*END: ARRANGE OUR PORTFOLIO ITEMS*/
+
+     #wrapper #header-box, 
+     #wrapper #about-me-box {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        width: 91%;
+        margin: 0 auto;
+    }
 
 
+}
 
 
 
