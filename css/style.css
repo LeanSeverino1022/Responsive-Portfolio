@@ -11,30 +11,19 @@
     src: url('../BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.woff') format('woff');
 }
 
-html {
 
-    /*font-size: 20px;*/
-}
+
+
+/**********************************
+    General
+***********************************/
 
 body {
-
     background: #FAFAFB;
-}
-
-
-/*:empty { background: green;} */
-
-
-
-
-/***********BASE STYLES************/
-
+  }
 
 h1, h2, li, p {
-
-    text-align: center;   
-
-    /*border: 2px red dotted;*/
+    text-align: center;    
 }
 
 
@@ -43,34 +32,26 @@ img {
     text-align: center;
 }
 
-nav li {
-  
+nav li {  
     font-size: 1rem;
-
     background: white;
-
     height: 50px;
     margin: 2px auto;
-    align-content: center;
-    /*border: 2px red dotted;*/
-    padding: ;
+    align-content: center;   
 }
 
 
 nav a {
-
     padding-top: 1rem;
- 
     text-decoration: none;
     display: block;
+    color: black; 
     height: 100%;
-
 }
 
 /* nav link */
-nav a, nav a:visited {
-
-     color: #000;
+nav a:hover, nav a:visited {
+     color: slategrey;
      font-weight: 700;
 }
  
@@ -80,14 +61,16 @@ nav a, nav a:visited {
 }
 
 
-
-/*********CONTAINER STYLES**********/
+/********************
+CONTAINER STYLES
+*********************/
 
 
 #wrapper {
-
+    max-width: 1224px;
+    margin: 0 auto;        
     line-height: 1.5em;
-    color: #000;      
+    color: slategrey;      
 }
 
 #header-box, #about-me-box, #contact-box {
@@ -101,7 +84,6 @@ nav a, nav a:visited {
 /*select all children of wrapper*/
 #header-box,
 #wrapper > div {
-
         padding-left: 5%;    
         padding-right: 5%;
 }
@@ -110,25 +92,31 @@ nav a, nav a:visited {
 nav li:last-child { margin-bottom: 0; }
 
 
-/*************ABOUT-ME*********/
+/***********
+ABOUT-ME
+***********/
 
 #about-me-box { padding-bottom: 40px; }
 
 #about-me-box img {
     
     width: 200px;
-    
-   /*lets center our image*/
     display: block;   
     margin: 0 auto 40px;
     padding-top: 30px;   
 } 
 
 
-#about-me-box p { margin: 0; }
+#about-me-box p { 
+    font-size: 16px;
+    line-height: 1.5;        
+    margin: 0; 
+}
 
 
-/************PORTFOLIO************/
+/************
+PORTFOLIO
+************/
 
 #portfolio-box {
      background: #fff;
@@ -148,7 +136,6 @@ nav li:last-child { margin-bottom: 0; }
 }
 
 #portfolio-box p {
-
     font-family: "BLOKKNeue-Regular", serif;   
 }
 
@@ -161,7 +148,9 @@ nav li:last-child { margin-bottom: 0; }
 }
 
 
-/************CONTACT***********/
+/**********
+ CONTACT
+***********/
 
 #contact-box {
     padding-top: 30px;
@@ -225,7 +214,10 @@ footer a:visited {
      clear: both;
 }
 
-/**********MEDIA QUERIES***********/
+
+/******************
+MEDIA QUERIES
+*******************/
 
 @media(min-width: 768px) 
 {
@@ -264,11 +256,10 @@ footer a:visited {
         padding-top: 30px;    
     }
 
-    .about-me-text p {
-        text-align: left;
+    #about-me-box p {
+        text-align: left;       
         font-size: 18px;
-        line-height: 1.8rem;
-
+        line-height: 2.3rem;
     }
 
   
@@ -306,12 +297,11 @@ footer a:visited {
     .right-footer-wide { 
         display: inline-block;   
     }   
-     
- }
+   
+ } /*END: @media(min-width: 768px) */
+    
 
-
-
-@media(min-width: 1024px) 
+@media(min-width: 970px) 
 { 
 
     #header-box .student-header,
@@ -331,8 +321,16 @@ footer a:visited {
         text-align: right;    
     }
 
-     #about-me-box { padding-top: 0; }
-
+    #about-me-box p {
+        width: 100%;
+        vertical-align: text-top;
+        font-size: 1.80rem;
+        line-height: 1.5;    
+    } 
+    
+    .no-line-height-p:not(::first-line) {
+        color: red;
+    }
    
     #wrapper #portfolio-box {
         width: 90%;
@@ -367,9 +365,14 @@ footer a:visited {
         width: 91%;
         margin: 0 auto;
     }
+    
+    #wrapper nav li:not(:last-child) {
+        margin-right: -2px;
+        padding-right: 15px;
+        border-right: 1px black solid;               
+    } 
 
-
-}
+} /*END: @media(min-width: 1024) */
 
 
 
