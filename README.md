@@ -1,4 +1,4 @@
-# Created a responsive portfolio website without a framewrok.
+# Created a responsive portfolio website without using a framework.
 Responsive Layout 
 Pure HTML and CSS
 
